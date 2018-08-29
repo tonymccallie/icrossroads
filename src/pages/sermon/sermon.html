@@ -1,0 +1,24 @@
+<ion-header no-border>
+	<ion-navbar color="primary">
+		<ion-title center>Sermon</ion-title>
+		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<img *ngIf="!source" src="{{rootUrl}}/img/thumb/{{series.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto">
+	<div *ngIf="source">
+		<video [src]="source" [poster]="poster" controls style="width: 100%;"></video>
+	</div>
+	<ion-toolbar color="primary">
+		{{sermon.MessageMessage.title}}
+	</ion-toolbar>
+	<div padding>
+		Speaker: {{sermon.MessageAuthor.name}}<br />
+		Date: {{sermon.MessageMessage.start | amDateFormat:'MMM Do, YYYY'}}<br />
+		<div *ngIf="sermon.MessageMessage.descr">Description: {{sermon.MessageMessage.descr}}</div>
+		<p><br /></p>
+		<button *ngIf="sermon.MediaAudio.filename" ion-button block (click)="playAudio(sermon)"><ion-icon name="threeleaf-listen"></ion-icon>&nbsp;&nbsp;Listen</button>
+		<!-- <button *ngIf="sermon.MediaVideo.filename" ion-button block (click)="playVideo(sermon)"><ion-icon name="threeleaf-watch"></ion-icon>&nbsp;&nbsp;Watch</button> -->
+	</div>
+</ion-content>

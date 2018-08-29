@@ -1,0 +1,205 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+@import "ionic.globals";
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+$font-family-base: LatoRegular;
+$tabs-ios-tab-icon-size: 25px;
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+$colors: ( primary: #00447c, secondary: #32db64, danger: #f53d3d, light: #f4f4f4, dark: #23232B);
+$text-color: color($colors, light);
+$tabs-ios-tab-text-color: $text-color;
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+@import "ionic.theme.default";
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+@import "ionic.ionicons";
+// Fonts
+// --------------------------------------------------
+@import "roboto";
+@import "noto-sans";
+@font-face {
+	font-family: 'Threeleaf';
+	src: url('../assets/fonts/ThreeLeafApp.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'LatoRegular';
+	src: url('../assets/fonts/Lato-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'LatoItalic';
+	src: url('../assets/fonts/Lato-Italic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'LatoBlack';
+	src: url('../assets/fonts/Lato-Black.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'LatoBlackItalic';
+	src: url('../assets/fonts/Lato-BlackItalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'LatoBold';
+	src: url('../assets/fonts/Lato-Bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'LatoBoldItalic';
+	src: url('../assets/fonts/Lato-BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'LatoHairline';
+	src: url('../assets/fonts/Lato-Hairline.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'LatoHairlineItalic';
+	src: url('../assets/fonts/Lato-HairlineItalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'LatoLight';
+	src: url('../assets/fonts/Lato-Light.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'LatoLightItalic';
+	src: url('../assets/fonts/Lato-LightItalic.ttf') format('truetype');
+}
+
+.ion-ios-threeleaf-home,
+.ion-ios-threeleaf-home-outline {
+	&:before {
+		font-family: 'Threeleaf';
+		content: "h";
+	}
+}
+
+.ion-ios-threeleaf-sermons,
+.ion-ios-threeleaf-sermons-outline {
+	&:before {
+		font-family: 'Threeleaf';
+		content: "Z";
+	}
+}
+
+.ion-ios-threeleaf-stories,
+.ion-ios-threeleaf-stories-outline {
+	&:before {
+		font-family: 'Threeleaf';
+		content: "H";
+	}
+}
+
+.ion-ios-threeleaf-events,
+.ion-ios-threeleaf-events-outline {
+	&:before {
+		font-family: 'Threeleaf';
+		content: "e";
+	}
+}
+
+.ion-ios-threeleaf-resources,
+.ion-ios-threeleaf-resources-outline {
+	&:before {
+		font-family: 'Threeleaf';
+		content: "R";
+	}
+}
+
+.ion-ios-threeleaf-times,
+.ion-ios-threeleaf-times-outline {
+	&:before {
+		font-family: 'Threeleaf';
+		content: "R";
+	}
+}
+
+.ion-ios-threeleaf-pause,
+.ion-ios-threeleaf-pause-outline {
+	&:before {
+		font-family: 'Threeleaf';
+		content: "op";
+	}
+}
+
+.ion-ios-threeleaf-play,
+.ion-ios-threeleaf-play-outline {
+	&:before {
+		font-family: 'Threeleaf';
+		content: "oP";
+	}
+}
+
+.ion-ios-threeleaf-listen,
+.ion-ios-threeleaf-listen-outline {
+	&:before {
+		font-family: 'Threeleaf';
+		content: "L";
+	}
+}
+
+.ion-ios-threeleaf-watch,
+.ion-ios-threeleaf-watch-outline {
+	&:before {
+		font-family: 'Threeleaf';
+		content: "d";
+	}
+}
+
+.ion-ios-refresh {
+	animation: spin 1.5s infinite linear;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(359deg);
+	}
+}
+//Dark:23232B
+//Med:2C2C34
+//MedLight:42424A
+//Blue:00447c
+$background-ios-color: #2C2C34;

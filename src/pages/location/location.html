@@ -1,0 +1,68 @@
+<ion-header no-border>
+	<ion-navbar color="primary">
+		<ion-title center>Location</ion-title>
+		<button ion-button icon-only menuToggle right>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<img src="assets/img/locations.jpg">
+	<div padding>
+		<h1>Locations</h1>
+		<p>We have 3 campuses accross Wichita Falls. Check out the differnt service times we have and make plans to join us this weekend.
+			See you Sunday.</p>
+
+		<h3>Downtown Campus:</h3>
+		<br>
+		<p>1200 9th St.
+			<br> Wichita Falls, TX 76301</p>
+		<p>
+			<strong>Phone:</strong>&nbsp;940.723.2764
+			<br>
+			<strong>Fax:&nbsp;</strong>940.766.1373</p>
+		<b>Modern Worship</b>
+		<p>8:15am - East Sanctuary
+			<br> 11:00am – Worship Center</p>
+		<b>Blended Worship</b>
+		<p>9:30am - Worship Center</p>
+
+		<button ion-button outline round small color="light" (click)="map('1200 9th St., Wichita Falls, TX 76301')">Get Directions</button>
+		<br>
+		<br>
+
+
+		<h3>West Campus:</h3>
+		<br>
+		<p>4317 Barnett Road
+			<br> Wichita Falls, TX 76310</p>
+		<p>
+			<strong>Phone:</strong>&nbsp;940.723.2764
+			<br>
+			<strong>Fax:&nbsp;</strong>940.766.1373</p>
+		<b>Modern Worship</b>
+		<p>9:30am - West Auditorium
+			<br> 11:00am – West Auditorium</p>
+
+		<button ion-button outline round small color="light" (click)="map('4317 Barnett Road, Wichita Falls, TX 76310')">Get Directions</button>
+		<br>
+		<br>
+
+
+		<h3>Sheppard Campus:</h3>
+		<br>
+		<p>2101 Puckett Rd
+			<br> Wichita Falls, TX 76306</p>
+		<p>
+			<strong>Phone:</strong>940.723.2764
+			<br>
+			<strong>Fax:&nbsp;</strong>940.766.1373</p>
+		<b>Modern Worship</b>
+		<p>9:30am - Sheppard Auditorium
+			<br> 11:00am – Sheppard Auditorium</p>
+		<button ion-button outline round small color="light" (click)="map('2101 Puckett Rd, Wichita Falls, TX 76306')">Get Directions</button>
+		<br>
+		<br>
+	</div>
+</ion-content>

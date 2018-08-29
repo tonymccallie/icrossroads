@@ -1,0 +1,21 @@
+<ion-header no-border>
+	<ion-navbar color="primary">
+		<ion-title center>Sermons</ion-title>
+		<button ion-button icon-only menuToggle right>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<img src="{{rootUrl}}/img/thumb/{{series.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto">
+	<ion-toolbar color="primary">
+		{{series.title}}
+	</ion-toolbar>
+	<ion-list>
+		<button ion-item *ngFor="let sermon of sermons" (click)="viewSermon(sermon)">
+			<div item-start>{{sermon.MessageMessage.start | amDateFormat:'M/DD'}}</div>
+			{{sermon.MessageMessage.title}}
+		</button>
+	</ion-list>
+</ion-content>

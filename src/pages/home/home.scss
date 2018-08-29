@@ -1,0 +1,39 @@
+page-home {
+	// $navbar-ios-height: 60px;
+	// $toolbar-ios-height: 60px;
+	ion-slides {
+		height: auto;
+	}
+
+	ion-card {
+		img {
+			width: auto;
+		}
+	}
+	.card-background-page {
+		.ion-card {
+			position: relative;
+			text-align: center;
+		}
+		.Xcard-title {
+			position: absolute;
+			bottom: 0;
+			font-size: 1.2em;
+			width: 100%;
+			font-weight: bold;
+			color: colors($colors, primary);
+			background-color: rgba(255, 255, 255, 0.5);
+			padding: 10px 0;
+		}
+		.card-subtitle {
+			font-size: 1.0em;
+			position: absolute;
+			top: 52%;
+			width: 100%;
+			color: #fff;
+		}
+	}
+	.logo {
+		max-height: 45px;
+	}
+}

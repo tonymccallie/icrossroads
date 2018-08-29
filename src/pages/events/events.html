@@ -1,0 +1,33 @@
+<ion-header no-border>
+	<ion-navbar color="primary">
+		<ion-title center>Events</ion-title>
+		<button ion-button icon-only menuToggle right>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<div padding>
+		<h1>Events</h1>
+		<p>Each week we have different services and events across all 3 campuses. The following is our master calendar where you can get a birdseye view of everything coming up for the next few weeks.  If you would like further information, or would like to register for an event give us a call at the church offices </p>
+		<a ion-button outline round small color="light" href="tel:+19407232764">Call (940) 723-2764</a> 
+	</div>
+	<ion-list>
+		<div *ngFor="let month of events">
+			<!-- <ion-item-divider>{{month.name}}</ion-item-divider> -->
+			<div *ngFor="let day of month.days">
+				<ion-item-divider color="primary">{{day.name}}</ion-item-divider>
+				<div *ngFor="let event of day.events">
+					<ion-item>
+						<div item-start>{{event.OccurrenceStartTime | amLocal | amDateFormat:'h:mma'}}</div>
+						{{event.Name}}
+					</ion-item>
+				</div>
+			</div>
+		</div>
+	</ion-list>
+	<!-- <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+		<ion-infinite-scroll-content></ion-infinite-scroll-content>
+	</ion-infinite-scroll> -->
+</ion-content>

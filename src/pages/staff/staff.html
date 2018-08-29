@@ -1,0 +1,25 @@
+<ion-header no-border>
+	<ion-navbar color="primary">
+		<ion-title center>Staff</ion-title>
+		<button ion-button icon-only menuToggle right>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<div *ngFor="let department of departments">
+		<h3>{{department.StaffDepartment.title}}</h3>
+		<ion-card *ngFor="let staff of department.StaffLink; let i = index">
+			<img src="{{rootUrl}}/img/thumb/{{staff.StaffMember.MediaImage.filename}}/width:600/height:600/crop:true/zoom:auto" />
+			<ion-card-content>
+				<ion-card-title>{{staff.StaffMember.first_name + ' ' + staff.StaffMember.last_name}}</ion-card-title>
+				{{staff.StaffMember.title}}
+				<div class="spacer" style="height:10px"></div>
+				<a icon-left ion-button small outline round *ngIf="staff.StaffMember.email" href="mailto:{{staff.StaffMember.email}}">
+					<ion-icon name="mail-outline"></ion-icon> Email
+				</a>
+			</ion-card-content>
+		</ion-card>
+	</div>
+</ion-content>

@@ -1,0 +1,92 @@
+<ion-header no-border>
+	<ion-navbar color="primary">
+		<ion-title center>Service Times</ion-title>
+		<button ion-button icon-only menuToggle right>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<img src="assets/img/service_times_banner.jpg" />
+	<div padding>
+		<ion-grid>
+			<ion-row>
+				<ion-col>
+					<h1>Service Times</h1>
+					<p>Our weekend worship services are a time for us to gather as followers of Christ to remember and remind each other of
+						God's goodness to us. We offer multiple worship services and styles across our three campuses. You will be encouraged
+						and challenged through a time of biblical teaching, meaningful worship, and authentic fellowship. We can't wait to
+						meet you this weekend.</p>
+
+					<div class="spacer" style="height:30px"></div>
+
+					<h3>Downtown Campus</h3>
+					<p>Our downtown campus offer 2 different styles of worship experiences for everyone in your family.</p>
+					<button ion-button outline round small color="light" (click)="map('1200 9th St., Wichita Falls, TX 76301')">Get Directions</button>
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col col-4>
+					<img src="assets/img/downtown_modern.jpg" />
+				</ion-col>
+				<ion-col col-8>
+						<b>Worship Times</b>
+						<br />8:15am - East Sanctuary
+						<br />11:00am – Worship Center
+						<br /><br />
+						<b>Traditional Worship with Choir & Orchestra</b>
+						<br />9:30am - Worship Center
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col col-4>
+					<img src="assets/img/downtown_blended.jpg" />
+				</ion-col>
+				<ion-col col-8>
+						<b>Worship Times</b>
+						<br />8:15am - East Sanctuary
+						<br />11:00am – Worship Center
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col>
+					<div class="spacer" style="height:30px"></div>
+
+					<h3>West Campus</h3>
+					<p>Our west campus offers live worship, fellowship, and a teaching feed from our downtown campus.</p>
+					<button ion-button outline round small color="light" (click)="map('4317 Barnett Road, Wichita Falls, TX 76310')">Get Directions</button>
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col col-4>
+					<img src="assets/img/west.jpg" />
+				</ion-col>
+				<ion-col col-8>
+						<b>Modern Worship</b>
+						<br />9:30am - West Auditorium
+						<br />11:00am – West Auditorium
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col>
+					<div class="spacer" style="height:30px"></div>
+
+					<h3>Church at Sheppard</h3>
+					<p>Our west campus offers live worship, fellowship, and a teaching feed from our downtown campus.</p>
+					<button ion-button outline round small color="light" (click)="map('2101 Puckett Rd, Wichita Falls, TX 76306')">Get Directions</button>
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col col-4>
+					<img src="assets/img/sheppard.jpg" />
+				</ion-col>
+				<ion-col col-8>
+						<b>Modern Worship</b>
+						<br />9:30am - Sheppard Auditorium
+						<br />11:00am – Sheppard Auditorium
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</div>
+</ion-content>

@@ -1,0 +1,38 @@
+<!-- <ion-split-pane> -->
+<ion-menu [content]="content" side="right" type="reveal" persistent="true">
+	<ion-header no-border>
+		<ion-toolbar color="primary">
+			<ion-title *ngIf="!player.title">Menu</ion-title>
+			<ion-title *ngIf="player.title">
+				<ion-icon name="volume-up"></ion-icon> Now Playing</ion-title>
+		</ion-toolbar>
+	</ion-header>
+
+	<ion-content>
+		<ion-list>
+			<div *ngIf="player.title">
+				<ion-item (click)="pause()">
+					<ion-icon item-start *ngIf="player.playing && !player.loading" name="threeleaf-pause"></ion-icon>
+					<ion-icon item-start *ngIf="!player.playing && !player.loading" name="threeleaf-play"></ion-icon>
+					<ion-icon item-start *ngIf="player.loading" name="refresh" ></ion-icon>
+					{{player.title}}<br />{{player.speaker}}
+				</ion-item>
+				<ion-item>
+					<ion-range [(ngModel)]="player.percentage" (ionChange)="scrub($event)">
+						<ion-label range-left>{{player.current | date:'mm:ss' }}</ion-label>
+						<ion-label range-right>{{player.duration | date:'mm:ss' }}</ion-label>
+					</ion-range>
+				</ion-item>
+
+				<ion-list-header color="primary">Menu</ion-list-header>
+			</div>
+			<button ion-item menuClose *ngFor="let p of pages" (click)="openPage(p)">
+				<ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
+				{{ p.title }}
+			</button>
+		</ion-list>
+	</ion-content>
+</ion-menu>
+<!-- main navigation -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+<!-- </ion-split-pane> -->

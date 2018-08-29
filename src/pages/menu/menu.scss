@@ -1,0 +1,21 @@
+page-menu {
+	ion-menu {
+		// ion-header {
+		// 	height: 60px;
+		// }
+		// ion-navbar {
+		// 	height: 60px;
+		// }
+		ion-list-header {
+			ion-label {
+				text-align: center;
+			}
+		}
+	}
+	.toolbar-ios ion-title {
+		padding: 0 0 1px;
+	}
+	.bar-button-default-ios:hover:not(.disable-hover), .bar-button-default.bar-button-ios-default:hover:not(.disable-hover), .bar-button-clear-ios-default:hover:not(.disable-hover) {
+		color: color($colors,light);
+	}
+}

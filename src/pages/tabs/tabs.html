@@ -1,0 +1,15 @@
+<!-- <ion-header no-border>
+	<ion-navbar color="primary">
+		<ion-title start><img src="assets/logo.svg" class="logo"></ion-title>
+		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>
+	</ion-navbar>
+</ion-header> -->
+
+<ion-tabs [selectedIndex]="myIndex" no-border color="primary">
+	<ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="ios-home-outline"></ion-tab>
+	<ion-tab [root]="tab2Root" tabTitle="Sermons" tabIcon="ios-headset-outline"></ion-tab>
+	<ion-tab [root]="tab3Root" tabTitle="Events" tabIcon="ios-calendar-outline"></ion-tab>
+	<ion-tab [root]="tab6Root" tabTitle="Giving" tabIcon="ios-cash-outline"></ion-tab>
+	<ion-tab [root]="tab4Root" tabTitle="Services" tabIcon="ios-time-outline"></ion-tab>
+	<ion-tab #hiddenTab [root]="tab5Root" tabTitle="About" tabIcon="ios-time-outline"></ion-tab>
+</ion-tabs>

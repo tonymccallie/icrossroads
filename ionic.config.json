@@ -1,0 +1,14 @@
+{
+  "name": "FBC Wichita Falls",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "proxies": [
+    {
+      "path": "/calendars",
+      "proxyUrl": "/api_accessacs_mobile/v2/10413/calendars"
+    }
+  ],
+  "pro_id": "2191a4b0"
+}

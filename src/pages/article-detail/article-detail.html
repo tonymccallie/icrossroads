@@ -1,0 +1,15 @@
+<ion-header no-border>
+	<ion-navbar color="primary">
+		<ion-title center>Latest News</ion-title>
+		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>
+	</ion-navbar>
+</ion-header>
+
+
+<ion-content>
+	<img src="{{rootUrl}}/img/thumb/{{article.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto">
+	<ion-toolbar color="primary">
+		{{article.NewsArticle.title}}
+	</ion-toolbar>
+	<div padding [innerHTML]="article.NewsArticle.body"></div>
+</ion-content>
