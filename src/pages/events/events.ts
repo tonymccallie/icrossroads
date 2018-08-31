@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from "ionic-angular";
 import { GreybackProvider } from "../../providers/greyback/greyback";
 import { LoadingController } from "ionic-angular";
 import { InAppBrowser } from "@ionic-native/in-app-browser";
-import * as moment from "moment";
+// import * as moment from "moment";
 
 @IonicPage()
 @Component({

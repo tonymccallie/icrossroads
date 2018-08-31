@@ -24,7 +24,7 @@ export class GreybackProvider {
   getNews() {
     return this.http
       .get(
-        this.rootUrl + "/ajax/plugin/news/news_articles/json/limit:4/category:1"
+        this.rootUrl + "/ajax/plugin/news/news_articles/json/limit:4/category:2"
       )
       .map(result => result.json());
   }
@@ -76,7 +76,7 @@ export class GreybackProvider {
   getStaff() {
     return this.http
       .get(
-        this.rootUrl + "/ajax/plugin/staff/staff_departments/json/department:5"
+        this.rootUrl + "/ajax/plugin/staff/staff_departments/json/department:1"
       )
       .map(result => result.json());
   }

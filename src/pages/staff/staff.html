@@ -9,7 +9,7 @@
 
 <ion-content padding>
 
-	<h1>Staff</h1>
+	<!-- <h1>Staff</h1>
 
 	<p><strong>Ed Jenewein</strong> – Lead Pastor – <a href="mailto:ejenewein@icrossroads.org">ejenewein@icrossroads.org</a></p>
 	<p><strong>Clayton Coates</strong> – Grow/Small Group Pastor – <a href="mailto:ccoates@icrossroads.org">ccoates@icrossroads.org</a></p>
@@ -30,13 +30,14 @@
 	<p><strong>Ed Jenewein</strong> – <a href="mailto:ejenewein@icrossroads.org">ejenewein@icrossroads.org</a></p>
 	<p><strong>Dave Kohlmeier</strong> – <a href="mailto:kohlmeier.david0@gmail.com">kohlmeier.david0@gmail.com</a></p>
 	<p><strong>Ben Jertberg</strong> – <a href="mailto:benjertberg@yahoo.com">benjertberg@yahoo.com</a></p>
-	<p><strong>John Anglin&nbsp;</strong> – <a href="mailto:jhanglin@hotmail.com">jhanglin@hotmail.com</a></p>
+	<p><strong>John Anglin&nbsp;</strong> – <a href="mailto:jhanglin@hotmail.com">jhanglin@hotmail.com</a></p> -->
 
 
-	<!-- <div *ngFor="let department of departments">
+	<div *ngFor="let department of departments">
 		<h3>{{department.StaffDepartment.title}}</h3>
 		<ion-card *ngFor="let staff of department.StaffLink; let i = index">
-			<img src="{{rootUrl}}/img/thumb/{{staff.StaffMember.MediaImage.filename}}/width:600/height:600/crop:true/zoom:auto" />
+			<img *ngIf="staff.StaffMember.MediaImage.filename" src="{{rootUrl}}/img/thumb/{{staff.StaffMember.MediaImage.filename}}/width:600/height:600/crop:true/zoom:auto"
+			/>
 			<ion-card-content>
 				<ion-card-title>{{staff.StaffMember.first_name + ' ' + staff.StaffMember.last_name}}</ion-card-title>
 				{{staff.StaffMember.title}}
@@ -46,5 +47,5 @@
 				</a>
 			</ion-card-content>
 		</ion-card>
-	</div> -->
+	</div>
 </ion-content>

@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { IonicPage, NavController, NavParams } from "ionic-angular";
-// import { GreybackProvider } from '../../providers/greyback/greyback';
+import { GreybackProvider } from "../../providers/greyback/greyback";
 
 @IonicPage()
 @Component({
@@ -8,16 +8,20 @@ import { IonicPage, NavController, NavParams } from "ionic-angular";
   templateUrl: "staff.html"
 })
 export class StaffPage {
-  // departments: any[];
-  // rootUrl: string;
-  // constructor(public navCtrl: NavController, public navParams: NavParams, public greybackProvider: GreybackProvider) {
-  // 	this.greybackProvider.getStaff().subscribe(departments => {
-  // 		this.departments = departments.data;
-  // 	});
-  // 	this.rootUrl = greybackProvider.rootUrl;
-  // }
+  departments: any[];
+  rootUrl: string;
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public greybackProvider: GreybackProvider
+  ) {
+    this.greybackProvider.getStaff().subscribe(departments => {
+      this.departments = departments.data;
+    });
+    this.rootUrl = greybackProvider.rootUrl;
+  }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  // constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
     console.log("ionViewDidLoad StaffPage");
