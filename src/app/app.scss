@@ -20,11 +20,17 @@
 // $light: #ffffff;
 // $accent: #00447c;
 
-$dark: #323e48;
-$medium: #59606d;
-$medium-light: #5b6670;
+// $dark: #323e48;
+// $medium: #59606d;
+// $medium-light: #5b6670;
+// $light: #ffffff;
+// $accent: #ae5d57;
+
+$dark: #2d2d2d;
+$medium: #4f4f4f;
+$medium-light: #6d6c6c;
 $light: #ffffff;
-$accent: #ae5d57;
+$accent: #eb6752;
 
 ion-toolbar {
   color: color($colors, light);

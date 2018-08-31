@@ -1,6 +1,6 @@
 <ion-header no-border>
 	<ion-navbar color="primary">
-		<ion-title start><img src="assets/logo.svg" class="logo"></ion-title>
+		<ion-title start><img src="assets/logo.png" class="logo"></ion-title>
 		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>
 	</ion-navbar>
 </ion-header>
@@ -8,7 +8,7 @@
 <ion-content class="card-background-page">
 	<ion-slides autoplay="5000" loop="true" *ngIf="news && news.length">
 		<ion-slide *ngFor="let article of news" (click)="viewArticle(article)">
-			<img src="{{rootUrl}}/img/thumb/{{article.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto" />
+			<img src="{{rootUrl}}/img/thumb/{{article.MediaImage.filename}}/width:1100/height:600" />
 		</ion-slide>
 	</ion-slides>
 	<ion-toolbar color="primary">
@@ -18,7 +18,8 @@
 		<ion-refresher-content></ion-refresher-content>
 	</ion-refresher> -->
 	<ion-card *ngFor="let post of posts; let i = index">
-		<img *ngIf="post.CommunityPost.type!='gallery' && post.MediaImage.filename" src="{{rootUrl}}/img/thumb/{{post.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto" />
+		<img *ngIf="post.CommunityPost.type!='gallery' && post.MediaImage.filename" src="{{rootUrl}}/img/thumb/{{post.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto"
+		/>
 		<div *ngIf="post.CommunityPost.type=='gallery'">
 			<ion-slides autoplay="5000" loop="true" *ngIf="post.CommunityPicture && post.CommunityPicture.length">
 				<ion-slide *ngFor="let picture of post.CommunityPicture">
