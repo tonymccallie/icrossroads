@@ -71,7 +71,8 @@ export class AudioProvider {
 		this.loading = true;
 		this.title = config.title;
 		this.speaker = config.speaker;
-		this.player.src = config.url+'/file.mp3';
+		// this.player.src = config.url+'/file.mp3';
+		this.player.src = config.url;
 		this.player.load();
 		this.player.play();
 	}

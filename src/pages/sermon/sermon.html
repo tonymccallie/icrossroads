@@ -8,7 +8,10 @@
 <ion-content>
 	<img *ngIf="!source" src="{{rootUrl}}/img/thumb/{{series.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto">
 	<div *ngIf="source">
-		<video [src]="source" [poster]="poster" controls style="width: 100%;"></video>
+		<!-- <video [src]="source" [poster]="poster" controls style="width: 100%;"></video> -->
+		<video preload="none" style="max-width: 100%" controls [poster]="poster" [src]="source">
+			<!-- <source [src]="source" /> -->
+		</video>
 	</div>
 	<ion-toolbar color="primary">
 		{{sermon.MessageMessage.title}}
@@ -18,7 +21,8 @@
 		Date: {{sermon.MessageMessage.start | amDateFormat:'MMM Do, YYYY'}}<br />
 		<div *ngIf="sermon.MessageMessage.descr">Description: {{sermon.MessageMessage.descr}}</div>
 		<p><br /></p>
-		<button *ngIf="sermon.MediaAudio.filename" ion-button block (click)="playAudio(sermon)"><ion-icon name="threeleaf-listen"></ion-icon>&nbsp;&nbsp;Listen</button>
+		<!-- <button *ngIf="sermon.MediaAudio.filename" ion-button block (click)="playAudio(sermon)"><ion-icon name="threeleaf-listen"></ion-icon>&nbsp;&nbsp;Listen</button> -->
+		<button *ngIf="sermon.MessageMessage.keywords" ion-button block (click)="playAudio(sermon)"><ion-icon name="threeleaf-listen"></ion-icon>&nbsp;&nbsp;Listen</button>
 		<!-- <button *ngIf="sermon.MediaVideo.filename" ion-button block (click)="playVideo(sermon)"><ion-icon name="threeleaf-watch"></ion-icon>&nbsp;&nbsp;Watch</button> -->
 	</div>
 </ion-content>
