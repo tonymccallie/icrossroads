@@ -21,13 +21,22 @@ export class GreybackProvider {
     this.opts = new RequestOptions({ headers: this.headers });
   }
 
-  getNews() {
+  getNewsSlider() {
     return this.http
       .get(
-        this.rootUrl + "/ajax/plugin/news/news_articles/json/limit:4/category:2"
+        this.rootUrl + "/ajax/plugin/news/news_articles/json/limit:4/category:1"
       )
       .map(result => result.json());
   }
+
+  getNews() {
+    return this.http
+      .get(
+        this.rootUrl + "/ajax/plugin/news/news_articles/json/limit:6/category:3"
+      )
+      .map(result => result.json());
+  }
+
 
   getCommunity() {
     //return this.http.get(this.rootUrl + '/ajax/plugin/news/news_articles/json/limit:10/category:2').map(result => result.json());

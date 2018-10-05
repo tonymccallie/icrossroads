@@ -35,11 +35,13 @@ export class HomePage {
 	ionViewWillEnter() {
 		//fired every time
 		console.log('ionViewWillEnter HomePage');
-		this.greybackProvider.getNews().subscribe(news => {
+		this.greybackProvider.getNewsSlider().subscribe(news => {
 			this.news = news.data;
+			console.log('newsSlider',this.news);
 		});
-		this.greybackProvider.getCommunity().subscribe(posts => {
+		this.greybackProvider.getNews().subscribe(posts => {
 			this.posts = posts.data;
+			console.log('news rss',this.posts);
 		});
 		// this.greybackProvider.getCalendars().subscribe(results => {
 		// 	console.log(results);

@@ -12,24 +12,24 @@
 		</ion-slide>
 	</ion-slides>
 	<ion-toolbar color="primary">
-		Community Feed
+		News Feed
 	</ion-toolbar>
 	<!-- <ion-refresher (ionRefresh)="doRefresh($event)">
 		<ion-refresher-content></ion-refresher-content>
 	</ion-refresher> -->
 	<ion-card *ngFor="let post of posts; let i = index">
-		<img *ngIf="post.CommunityPost.type!='gallery' && post.MediaImage.filename" src="{{rootUrl}}/img/thumb/{{post.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto"
+		<img *ngIf="post.MediaImage.filename" src="{{rootUrl}}/img/thumb/{{post.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto"
 		/>
-		<div *ngIf="post.CommunityPost.type=='gallery'">
+		<!-- <div *ngIf="post.CommunityPost.type=='gallery'">
 			<ion-slides autoplay="5000" loop="true" *ngIf="post.CommunityPicture && post.CommunityPicture.length">
 				<ion-slide *ngFor="let picture of post.CommunityPicture">
 					<img src="{{rootUrl}}/img/thumb/{{picture.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto" />
 				</ion-slide>
 			</ion-slides>
-		</div>
+		</div> -->
 		<ion-card-content>
-			<ion-card-title>{{post.CommunityPost.title}}</ion-card-title>
-			<div [innerHTML]="post.CommunityPost.body"></div>
+			<!-- <ion-card-title>{{post.NewsArticle.title}}</ion-card-title> -->
+			<div [innerHTML]="post.NewsArticle.body"></div>
 			<!-- <pre>{{post | json}}</pre> -->
 		</ion-card-content>
 	</ion-card>
