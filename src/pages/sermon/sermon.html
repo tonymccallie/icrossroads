@@ -9,8 +9,8 @@
 	<img *ngIf="!source" src="{{rootUrl}}/img/thumb/{{series.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto">
 	<div *ngIf="source">
 		<!-- <video [src]="source" [poster]="poster" controls style="width: 100%;"></video> -->
-		<video preload="none" style="max-width: 100%" controls [poster]="poster" [src]="source">
-			<!-- <source [src]="source" /> -->
+		<video preload="none" style="max-width: 100%; width: 100%;" controls [poster]="poster">
+			<source [src]="source" />
 		</video>
 	</div>
 	<ion-toolbar color="primary">

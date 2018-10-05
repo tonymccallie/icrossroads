@@ -1,9 +1,15 @@
 page-series {
+	img {
+		width: 99%;
+	}
 	.grid,
 	.col,
 	.col-6 {
 		padding: 0;
 		margin-bottom: -3px;
 		cursor: pointer;
+		img {
+			width: 100%;
+		}
 	}
 }

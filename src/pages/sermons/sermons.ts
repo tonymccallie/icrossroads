@@ -20,6 +20,7 @@ export class SermonsPage {
 			this.sermons = sermons.data;
 		});
 		this.series = this.navParams.get('series');
+		console.log('series data:', this.series);
 		this.rootUrl = greybackProvider.rootUrl;
 	}
 
